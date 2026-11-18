@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    padding: 0 40px;
+    background-color: #3b2a20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        color: #f7f1ea;
+        font-size: 26px;
+        margin-bottom: 0;
+        i{
+            color: #c58b4c;
+        }
+    }
+    ul{
+        display: flex;
+        li{
+            a{
+                color: #fff;
+                margin: 0 12px;
+                display: inline-block;
+                line-height: 64px;
+            }
+            &:nth-child(2){
+                position: relative;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    background-color: #fff;
+                    width: 150px;
+                    display: none;
+                    z-index: 5;
+                    li{
+                        border-bottom: 1px solid #333;
+                        &:first-child{
+                            border-top: 1px solid #fff;
+                        }
+                        a{
+                            margin: 0;
+                            text-align: center;
+                            width: 100%;
+                            color: #333;
+                            line-height: 55px;
+                            font-weight: bold;
+                            &:hover{
+                                background-color: #f7f1ea;
+                                color: #c58b4c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+li:hover > .dropdown{
+    display: block;
+}
+
+.container{
+    background-color: #f7f1ea;
+    .bgImage{
+        height: 340px;
+        background: url(img/bgImage.jpg) no-repeat center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        h2{
+            color: #fff;
+            z-index: 2;
+            font-size: 50px;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+        }
+        p{
+            color: #fff;
+            z-index: 2;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+    }
+    .calismaSaatleriTablosu{
+        padding: 36px;
+        text-align: center;
+        h3{
+            font-size: 24px;
+            color: #6f4e37;
+            margin-bottom: 30px;
+            i{
+                color: #c58b4c;
+            }
+        }
+        .table-responsive{
+            overflow-x: auto;
+            table{
+                border-collapse: collapse;
+                max-width: 500px;
+                width: 100%;
+                margin: 0 auto;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                thead{
+                    tr{
+                        th{
+                            padding: 15px;
+                            background-color: #6f4e37;
+                            color: #fff;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        border-bottom: 1px solid #eadfd3;
+                        &:hover{
+                            td{
+                                background-color:#f1e3d3 !important;
+                            }
+                        }
+                        td{
+                            padding: 15px;
+                            background-color: #fff;
+                            letter-spacing: 1px;
+                        }
+                        &:nth-child(even){
+                            td{
+                                background-color: #fbf7f2;
+                            }
+                            
+                        }
+                        &:last-child{
+                            td{
+                                color: #c0392b;
+                                font-weight: bold;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .rezervasyonFormu{
+        padding: 36px;
+        text-align: center;
+        h3{
+            font-size: 24px;
+            color: #6f4e37;
+            margin-bottom: 30px;
+            i{
+                color: #c58b4c;
+            }
+        }
+        form{
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            color: #444;
+            margin-bottom: 36px;
+            div{
+                text-align: start;
+                margin-bottom: 20px;
+                label{
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    font-size: 15px;
+                    i{
+                        color: #c58b4c;
+                    }
+                    span{
+                        color: darkred;
+                    }
+                }
+                input,select, textarea{
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #eadfd3;
+                    background-color: #fbf7f2;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    resize: none;
+                    &:focus{
+                        outline: 2px solid #c58b4c;
+                        border: none;
+                    }
+                    &::placeholder{
+                        letter-spacing: 1px;
+                    }
+                    option{
+                        letter-spacing: 1px;
+                    }
+                }
+                input[required]{
+                    border-left: 4px solid #c58b4c;
+                }
+            }
+            .dateTime{
+                div{
+                    display: inline-block;
+                    width: 45%;
+                    margin-bottom: 0;
+                    &:first-child{
+                        margin-right: 20px;
+                    }
+                }
+            }
+            .checkbox{
+                label{
+                    margin-bottom: 15px;
+                }
+                div{
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 6px;
+                    margin: 0 25px 0 0;
+                    input{
+                        width: auto;
+                        outline: none;
+                    }
+                    label{
+                        display: inline;
+                        margin-bottom: 0;
+                        font-weight: normal;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .button{
+                button{
+                    padding: 15px;
+                    width: 100%;
+                    border: none;
+                    background-color: #6f4e37;
+                    color: #fff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    transition: background-color .4s;
+                    &:hover{
+                        background-color: #c58b4c;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    padding: 36px 0;
+    background-color: #3b2a20;
+    color: #d8c7b6;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    p{
+        padding-bottom: 20px;
+        a{
+            color: #d8c7b6;
+            &:nth-child(2){
+                margin: 0 10px;
+            }
+            i{
+                font-size: 24px;
+                transition: color .4s;
+                &:hover{
+                    color: #c58b4c;
+                }
+            }
+        }
+        &:last-child{
+            padding-bottom: 0;
+            opacity: 0.7;
+        }
+        > i{
+            color: #c58b4c;
+        }
+    }
+}
