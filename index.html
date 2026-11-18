@@ -5,77 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>Form Elemanlarına Css Uygulamak</title>
+    <title>Applying CSS to Form Elements</title>
 </head>
 <body>
     <header id="header">
         <h1>
             <i class="fa-solid fa-mug-hot"></i>
-            Köşe Kahve
+            Corner Coffee
         </h1>
         <ul>
-            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#">Home</a></li>
             <li>
                 <a href="#" class="menu">
-                    Menü
+                    Menu
                     <i class="fa-solid fa-caret-down"></i>
                 </a>
                 <ul class="dropdown">
-                    <li><a href="#">Kahveler</a></li>
-                    <li><a href="#">Tatlılar</a></li>
-                    <li><a href="#">İçecekler</a></li>
+                    <li><a href="#">Coffees</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Drinks</a></li>
                 </ul>
             </li>
-            <li><a href="#">Rezervasyon</a></li>
-            <li><a href="#">İletişim</a></li>
+            <li><a href="#">Reservation</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </header>
     <main class="container">
         <section class="bgImage">
-            <h2>Masanızı Ayırtın</h2>
-            <p>Sıcak bir kahve ve sakin bir köşe sizi bekliyor.</p>
+            <h2>Book Your Table</h2>
+            <p>A warm coffee and a quiet corner are waiting for you.</p>
         </section>
         <section class="calismaSaatleriTablosu">
             <h3>
                 <i class="fa-regular fa-clock"></i>
-                Çalışma Saatleri
+                Opening Hours
             </h3>
             <div class="table-responsive">
                 <table>
                     <thead>
                         <tr>
-                            <th>GÜN</th>
-                            <th>SAAT</th>
+                            <th>DAY</th>
+                            <th>HOURS</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Pazartesi</td>
+                            <td>Monday</td>
                             <td>08:00 - 22:00</td>
                         </tr>
                         <tr>
-                            <td>Salı</td>
+                            <td>Tuesday</td>
                             <td>08:00 - 22:00</td>
                         </tr>
                         <tr>
-                            <td>Çarşamba</td>
+                            <td>Wednesday</td>
                             <td>08:00 - 22:00</td>
                         </tr>
                         <tr>
-                            <td>Perşembe</td>
+                            <td>Thursday</td>
                             <td>08:00 - 22:00</td>
                         </tr>
                         <tr>
-                            <td>Cuma</td>
+                            <td>Friday</td>
                             <td>08:00 - 23:00</td>
                         </tr>
                         <tr>
-                            <td>Cumartesi</td>
+                            <td>Saturday</td>
                             <td>09:00 - 23:00</td>
                         </tr>
                         <tr>
-                            <td>Pazar</td>
-                            <td>Kapalı</td>
+                            <td>Sunday</td>
+                            <td>Closed</td>
                         </tr>
                     </tbody>
                 </table>
@@ -84,42 +84,42 @@
         <section class="rezervasyonFormu">
             <h3>
                 <i class="fa-solid fa-calendar-check"></i>
-                Rezervasyon Formu
+                Reservation Form
             </h3>
             <form action="#">
                 <div>
                     <label for="nameSurname">
                         <i class="fa-solid fa-user"></i>
-                        Ad Soyad <span>*</span>
+                        Full Name <span>*</span>
                     </label>
-                    <input type="text" id="nameSurname" required placeholder="Örn: Tuğrul Çakır">
+                    <input type="text" id="nameSurname" required placeholder="E.g. Tuğrul Çakır">
                 </div>
                 <div>
                     <label for="phone">
                         <i class="fa-solid fa-phone"></i>
-                        Telefon <span>*</span>
+                        Phone <span>*</span>
                     </label>
                     <input type="tel" id="phone" required placeholder="05xx xxx xx xx">
                 </div>
                 <div>
                     <label for="email">
                         <i class="fa-solid fa-envelope"></i>
-                        E-Posta
+                        Email
                     </label>
-                    <input type="email" id="email" placeholder="05xx xxx xx xx">
+                    <input type="email" id="email" placeholder="example@gmail.com">
                 </div>
                 <div class="dateTime">
                     <div>
                         <label for="date">
                             <i class="fa-solid fa-calendar"></i>
-                            Tarih <span>*</span>
+                            Date <span>*</span>
                         </label>
-                        <input type="date" id="date" max="2008-12-31" required>
+                        <input type="date" id="date" required>
                     </div>
                     <div>
                         <label for="time">
                             <i class="fa-regular fa-clock"></i>
-                            Saat <span>*</span>
+                            Time <span>*</span>
                         </label>
                         <input type="time" id="time" required>
                     </div>
@@ -127,37 +127,37 @@
                 <div>
                     <label for="numberOfPeople">
                         <i class="fa-solid fa-users"></i>
-                        Kişi Sayısı
+                        Number of People
                     </label>
                     <select id="numberOfPeople">
-                        <option value="1-2">1-2 kişi</option>
-                        <option value="3-4">3-4 kişi</option>
-                        <option value="5+">5 ve üzeri</option>
+                        <option value="1-2">1-2 people</option>
+                        <option value="3-4">3-4 people</option>
+                        <option value="5+">5 or more</option>
                     </select>
                 </div>
                 <div class="checkbox">
                     <label>
                         <i class="fa-solid fa-chair"></i>
-                        Masa Tercihi
+                        Table Preference
                     </label>
                     <div>
                         <input type="radio" id="radio1" name="radio" required>
-                        <label for="radio1">İç Mekân</label>
+                        <label for="radio1">Indoor</label>
                     </div>
                     <div>
                         <input type="radio" id="radio2" name="radio" required>
-                        <label for="radio2">Bahçe</label>
+                        <label for="radio2">Garden</label>
                     </div>
                 </div>
                 <div class="textarea">
                     <label for="note">
                         <i class="fa-solid fa-pen"></i>
-                        Not
+                        Note
                     </label>
-                    <textarea id="note" placeholder="Doğum günü, bebek sandalyesi vb." rows="5"></textarea>
+                    <textarea id="note" placeholder="Birthday, high chair, etc." rows="5"></textarea>
                 </div>
                 <div class="button">
-                    <button type="submit">Rezervasyon Yap</button>
+                    <button type="submit">Make a Reservation</button>
                 </div>
             </form>
         </section>
@@ -165,7 +165,7 @@
     <footer>
         <p>
             <i class="fa-solid fa-location-dot"></i>
-            Moda Cad. No:12, Kadıköy / İstanbul
+            12 Moda St., Kadıköy / Istanbul
         </p>
         <p>
             <i class="fa-solid fa-phone"></i>
@@ -183,7 +183,7 @@
             </a>
         </p>
         <p>
-            <small>© 2026 Köşe Kahve</small>
+            <small>© 2026 Corner Coffee</small>
         </p>
     </footer>
 </body>
